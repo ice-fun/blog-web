@@ -12,19 +12,19 @@
               <a class="me-article-title" @click="">{{ item.articleTitle }}</a>
 <!--              <el-button v-if="weight > 0" class="me-article-icon" type="text">置顶</el-button>-->
               <span class="me-pull-right me-article-count">
-                <i class="me-icon-comment" />&nbsp;{{ item.watchCount }}
+                <i class="me-icon-comment" />&nbsp;{{ item.commentCount }}
               </span>
               <span class="me-pull-right me-article-count">
                 <i class="el-icon-view" />&nbsp;{{ item.watchCount }}
               </span>
             </div>
             <div class="me-artile-description">
-              {{ articleSummary }}
+              {{ item.articleSummary }}
             </div>
 
             <div class="me-article-footer">
               <span class="me-article-author">
-                <i class="me-icon-author" />&nbsp;{{ item.articleTitle }}
+                <i class="me-icon-author" />&nbsp;{{ item.userNickName }}
               </span>
 
               <el-tag v-for="t in item.articleLabels" :key="t" size="mini" type="success">{{ t }}</el-tag>
